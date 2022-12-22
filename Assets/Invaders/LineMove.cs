@@ -3,12 +3,12 @@ using UnityEngine;
 
 public class LineMove : MonoBehaviour {
     [SerializeField] private protected GameObject[] invaders;
-    
+    [SerializeField] private protected Sprite[] freames;
     private protected float speed = 1f, speedDown = 0;
     private protected const double LIMIT_X = 6;
 
     private protected int currentInvader = 0;
-    private protected byte direction = 1, changeDirection = 0;
+    private protected byte direction = 1, changeDirection = 0, animationFreame = 1;
     
     private void Start() {
         switch(direction) {
@@ -36,9 +36,12 @@ public class LineMove : MonoBehaviour {
                     case 1: currentInvader = invaders.Length - 1;  break;
                 }
                 VerifyDirectionChange();
+                if(animationFreame == 0) animationFreame = 1;
+                else animationFreame = 0;
             }
         } while(invaders[currentInvader].activeSelf != true);
 
+        invaders[currentInvader].GetComponent<SpriteRenderer>().sprite = freames[animationFreame];
         invaders[currentInvader].transform.position += Vector3.right * speed;
         invaders[currentInvader].transform.position += Vector3.down * speedDown;
 
