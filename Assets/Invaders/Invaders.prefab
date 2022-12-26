@@ -70,6 +70,9 @@ MonoBehaviour:
   freames:
   - {fileID: -70996420, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
   - {fileID: -1509788520, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
+  changeDirection: 0
+  end: 0
+  allInvadersDie: 0
 --- !u!1 &3054120280432043194
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,6 +143,9 @@ MonoBehaviour:
   freames:
   - {fileID: 873179072, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
   - {fileID: -1996290526, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
+  changeDirection: 0
+  end: 0
+  allInvadersDie: 0
 --- !u!1 &3368476534219316325
 GameObject:
   m_ObjectHideFlags: 0
@@ -164,7 +170,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3368476534219316325}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -242,6 +248,9 @@ MonoBehaviour:
   freames:
   - {fileID: -70996420, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
   - {fileID: -1509788520, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
+  changeDirection: 0
+  end: 0
+  allInvadersDie: 0
 --- !u!1 &7505588725422847676
 GameObject:
   m_ObjectHideFlags: 0
@@ -312,6 +321,9 @@ MonoBehaviour:
   freames:
   - {fileID: 873179072, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
   - {fileID: -1996290526, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
+  changeDirection: 0
+  end: 0
+  allInvadersDie: 0
 --- !u!1 &7525222837805795890
 GameObject:
   m_ObjectHideFlags: 0
@@ -382,6 +394,9 @@ MonoBehaviour:
   freames:
   - {fileID: -3152965, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
   - {fileID: 469722716, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
+  changeDirection: 0
+  end: 0
+  allInvadersDie: 0
 --- !u!1 &8393344728729478068
 GameObject:
   m_ObjectHideFlags: 0
@@ -391,6 +406,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1682805654276966809}
+  - component: {fileID: 1208234231}
   m_Layer: 0
   m_Name: Invaders
   m_TagString: Untagged
@@ -415,6 +431,26 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1208234231
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8393344728729478068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6671aced1c5b6fd4a9df8d3f2c956f10, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lines:
+  - {fileID: 4008356351589249600}
+  - {fileID: 8288974085899291609}
+  - {fileID: 1564872951413330220}
+  - {fileID: 3671096830749880922}
+  - {fileID: 4885641947339797292}
+  currentLine: 0
+  timeLoop: 0.09
 --- !u!1 &9156642521062338413
 GameObject:
   m_ObjectHideFlags: 0
@@ -439,7 +475,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9156642521062338413}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -4019,11 +4055,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7264837655388304368, guid: 8aebaf23eec6e114b8fbbd20bf56dd60, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -9.5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7264837655388304368, guid: 8aebaf23eec6e114b8fbbd20bf56dd60, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.5
+      value: 5.5
       objectReference: {fileID: 0}
     - target: {fileID: 7264837655388304368, guid: 8aebaf23eec6e114b8fbbd20bf56dd60, type: 3}
       propertyPath: m_LocalPosition.z
