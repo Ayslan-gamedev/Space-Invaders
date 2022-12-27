@@ -6,7 +6,7 @@ public class LineMove : MonoBehaviour {
 
     private protected float speed = 0.25f;
     private protected byte speedDown = 0;
-    private protected const double LIMIT_X = 6;
+    private protected const double LIMIT_X = 7.25;
 
     private protected int currentInvader = 0;
     private protected byte direction = 1, animationFreame = 1;

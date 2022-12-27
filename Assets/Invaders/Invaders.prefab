@@ -72,7 +72,7 @@ MonoBehaviour:
   - {fileID: -1509788520, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
   changeDirection: 0
   end: 0
-  allInvadersDie: 0
+  invadersQuant: 0
 --- !u!1 &3054120280432043194
 GameObject:
   m_ObjectHideFlags: 0
@@ -145,7 +145,7 @@ MonoBehaviour:
   - {fileID: -1996290526, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
   changeDirection: 0
   end: 0
-  allInvadersDie: 0
+  invadersQuant: 0
 --- !u!1 &3368476534219316325
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,7 +250,7 @@ MonoBehaviour:
   - {fileID: -1509788520, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
   changeDirection: 0
   end: 0
-  allInvadersDie: 0
+  invadersQuant: 0
 --- !u!1 &7505588725422847676
 GameObject:
   m_ObjectHideFlags: 0
@@ -323,7 +323,7 @@ MonoBehaviour:
   - {fileID: -1996290526, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
   changeDirection: 0
   end: 0
-  allInvadersDie: 0
+  invadersQuant: 0
 --- !u!1 &7525222837805795890
 GameObject:
   m_ObjectHideFlags: 0
@@ -396,7 +396,7 @@ MonoBehaviour:
   - {fileID: 469722716, guid: c570164c7ffadac469f54fec66a79cdb, type: 3}
   changeDirection: 0
   end: 0
-  allInvadersDie: 0
+  invadersQuant: 0
 --- !u!1 &8393344728729478068
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,8 +449,8 @@ MonoBehaviour:
   - {fileID: 1564872951413330220}
   - {fileID: 3671096830749880922}
   - {fileID: 4885641947339797292}
-  currentLine: 0
-  timeLoop: 0.09
+  timeLoop: 0.025
+  invadersQuant: 0
 --- !u!1 &9156642521062338413
 GameObject:
   m_ObjectHideFlags: 0
