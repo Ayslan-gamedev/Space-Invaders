@@ -6,7 +6,7 @@ public class LineMove : MonoBehaviour {
 
     private protected float speed = 0.25f;
     private protected byte speedDown = 0;
-    private protected const double LIMIT_X = 6;
+    private protected const double LIMIT_X = 7.95;
 
     private protected int currentInvader = 0;
     private protected byte direction = 1, animationFreame = 1;
@@ -43,7 +43,11 @@ public class LineMove : MonoBehaviour {
             invaders[currentInvader].GetComponent<SpriteRenderer>().sprite = freames[animationFreame];
             invaders[currentInvader].transform.position += Vector3.right * speed;
             invaders[currentInvader].transform.position += Vector3.down * speedDown;
-            
+
+            Invader currentInvaderScript = invaders[currentInvader].GetComponent<Invader>();
+            int randomValue = Random.Range(1, 100);
+            if(randomValue >= 96 && !currentInvaderScript.ray.collider && currentInvaderScript.canShot == 0) currentInvaderScript.Shot();
+
             if(invaders[currentInvader].transform.position.x > LIMIT_X || invaders[currentInvader].transform.position.x < -LIMIT_X) changeDirection = 1;
         }
         ReloadDirection();

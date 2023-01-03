@@ -9,7 +9,7 @@ public class InvadersManager : MonoBehaviour {
     [SerializeField] private protected float timeLoop;
     private protected float timer = 0;
 
-    [SerializeField]private protected int invadersQuant = 0;
+    [SerializeField] private protected int invadersQuant = 0;
 
     private void Start() {
         for(int i = 0; i < lines.Length; i++) invadersQuant += lines[i].invadersQuant;
@@ -54,5 +54,7 @@ public class InvadersManager : MonoBehaviour {
 
     public void KillInvader() {
         invadersQuant--;
+        if(invadersQuant <= 5)
+            timeLoop = 0;
     }
 }
