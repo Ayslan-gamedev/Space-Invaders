@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2559672611702112312}
   - component: {fileID: 6225379171675419961}
   - component: {fileID: 1143825462568939240}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: invader1
   m_TagString: Invader
   m_Icon: {fileID: 0}
@@ -27,7 +27,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2200882836887551372}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -5, y: 4.5, z: 0}
+  m_LocalPosition: {x: 1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -124,3 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bd464d125d1164b90d4749e91bbaf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  a: 0
+  shot: 0
+  shotPrefab:
+  - {fileID: 7411478838313271554, guid: 2a7219399807f9a419452c97fe02c1ce, type: 3}
+  - {fileID: 4590250541642775347, guid: 32e0f6df5b5f31b4eb27dde02b0918af, type: 3}
+  - {fileID: 6403560358606349080, guid: 88ea2822d66bfc14eb1b8aaa503b8f4c, type: 3}

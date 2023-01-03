@@ -11,6 +11,8 @@ public class shotMove : MonoBehaviour {
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
-        if(collision.CompareTag(tagToColision)) Destroy(gameObject);
+        if(!collision.CompareTag(tagToColision)) {
+            Destroy(gameObject);
+        }
     }
 }
