@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour {
     [SerializeField] private protected float speed;
@@ -10,6 +11,9 @@ public class Player : MonoBehaviour {
     public RaycastHit2D protectionRayCast;
     public bool a;
 
+    [SerializeField] private Text playerPoints;
+    private protected int currentPoints;
+
     void Update() {
         float newPosition = transform.position.x + speed * Input.GetAxisRaw("Horizontal") * Time.deltaTime;
         if(newPosition > -LIMIT_X && newPosition < LIMIT_X) transform.position = new Vector2(newPosition, transform.position.y);
@@ -19,5 +23,10 @@ public class Player : MonoBehaviour {
         protectionRayCast = Physics2D.Raycast(transform.position + Vector3.up, Vector2.up, 0.5f, 1 << 7);
         Debug.DrawRay(transform.position + Vector3.up, Vector2.up, Color.blue, 0.5f);
         a = protectionRayCast.collider;
+    }
+
+    public void AddPoints(int points) {
+        currentPoints += points;
+        playerPoints.text = currentPoints.ToString();
     }
 }

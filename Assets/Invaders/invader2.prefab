@@ -124,9 +124,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1bd464d125d1164b90d4749e91bbaf2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  a: 0
-  shot: 0
+  invaderPoints: 20
   shotPrefab:
   - {fileID: 7411478838313271554, guid: 2a7219399807f9a419452c97fe02c1ce, type: 3}
   - {fileID: 4590250541642775347, guid: 32e0f6df5b5f31b4eb27dde02b0918af, type: 3}
   - {fileID: 6403560358606349080, guid: 88ea2822d66bfc14eb1b8aaa503b8f4c, type: 3}
+  canShot: 0

@@ -54,7 +54,6 @@ public class InvadersManager : MonoBehaviour {
 
     public void KillInvader() {
         invadersQuant--;
-        if(invadersQuant <= 5)
-            timeLoop = 0;
+        if(invadersQuant <= 5) timeLoop = 0;
     }
 }

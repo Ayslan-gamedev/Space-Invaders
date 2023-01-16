@@ -3,6 +3,7 @@ using UnityEngine;
 
 public class Invader : MonoBehaviour {
     private protected InvadersManager manager;
+    [SerializeField] private protected int invaderPoints;
 
     private protected Player player;
     private float playerDistance;
@@ -26,6 +27,7 @@ public class Invader : MonoBehaviour {
         if(collision.CompareTag("PlayerShot")) {
             gameObject.SetActive(false);
             manager.KillInvader();
+            player.AddPoints(invaderPoints);
         }
     }
 
