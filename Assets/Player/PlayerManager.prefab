@@ -142,6 +142,9 @@ MonoBehaviour:
   shotPreFab: {fileID: 8638677545237822899, guid: bc5ee3e4af01f6542a87d46813b16338, type: 3}
   shotTransform: {fileID: 1935394827450911437}
   a: 0
+  playerPoints: {fileID: 0}
+  lifeImage: []
+  player_life: {fileID: 0}
 --- !u!1 &9208637305964926655
 GameObject:
   m_ObjectHideFlags: 0

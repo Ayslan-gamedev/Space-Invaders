@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Invader
   - PlayerShot
+  - InvaderShot
+  - Trench
   layers:
   - Default
   - TransparentFX
