@@ -11,9 +11,14 @@ public class InvadersManager : MonoBehaviour {
 
     [SerializeField] private protected int invadersQuant = 0;
 
+    private protected const string GAME_MANAGER_OBJECT = "GameManager";
+    private GameManager gameManager;
+
     private void Start() {
         for(int i = 0; i < lines.Length; i++) invadersQuant += lines[i].invadersQuant;
         currentLine = lines.Length - 1;
+
+        gameManager = GameObject.Find(GAME_MANAGER_OBJECT).GetComponent<GameManager>();
     }
 
     private void Update() {
@@ -54,6 +59,11 @@ public class InvadersManager : MonoBehaviour {
 
     public void KillInvader() {
         invadersQuant--;
-        if(invadersQuant <= 5) timeLoop = 0;
+        if(invadersQuant <= 5) {
+            timeLoop = 0;
+        }
+        if(invadersQuant == 0) {
+            gameManager.PlayerWin();
+        }
     }
 }

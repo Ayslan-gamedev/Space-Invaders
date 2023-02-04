@@ -130,3 +130,4 @@ MonoBehaviour:
   - {fileID: 4590250541642775347, guid: 32e0f6df5b5f31b4eb27dde02b0918af, type: 3}
   - {fileID: 6403560358606349080, guid: 88ea2822d66bfc14eb1b8aaa503b8f4c, type: 3}
   canShot: 0
+  explosionPreFab: {fileID: 4050212914978946042, guid: 0fc33082245115f4a9cdb226cdfd4309, type: 3}

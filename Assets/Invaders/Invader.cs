@@ -2,9 +2,11 @@ using UnityEditor.TextCore.Text;
 using UnityEngine;
 
 public class Invader : MonoBehaviour {
+    private protected const string INVADERS_MANAGER_GAMEOBJECT = "Invaders";
     private protected InvadersManager manager;
     [SerializeField] private protected int invaderPoints;
 
+    private protected const string PLAYER_OBJECT = "Player";
     private protected Player player;
     private float playerDistance;
 
@@ -18,16 +20,26 @@ public class Invader : MonoBehaviour {
     private protected float delayTime = 0.15f;
     private protected float timerToShot;
 
+    private protected const string GAMEMANAGER_OBJECT = "GameManager";
+    private protected GameManager gameManager;
+
+    [SerializeField] private protected GameObject explosionPreFab;
+
     private void Start() {
-        manager = GameObject.Find("Invaders").GetComponent<InvadersManager>();
-        player = GameObject.Find("Player").GetComponent<Player>();
+        manager = GameObject.Find(INVADERS_MANAGER_GAMEOBJECT).GetComponent<InvadersManager>();
+        player = GameObject.Find(PLAYER_OBJECT).GetComponent<Player>();
+
+        gameManager = GameObject.Find(GAMEMANAGER_OBJECT).GetComponent<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision) {
         if(collision.CompareTag("PlayerShot")) {
+            Instantiate(explosionPreFab, transform.position, transform.rotation);
+            player.PauseTime(0);
+
             gameObject.SetActive(false);
             manager.KillInvader();
-            player.AddPoints(invaderPoints);
+            gameManager.AddPoints(invaderPoints);
         }
     }
 
